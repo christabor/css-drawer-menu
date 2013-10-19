@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <title>CSS Drawer Menu</title>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <style type="text/css">
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    body {
+        height: 2000px; /* Testing height */
+        font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+        padding: 30px;
+    }
+    ul li {
+        line-height: 2em;
+    }
+    /* OPTIONAL THEMING */
+    .mobile-toggleable-menu {
+        background-color: #333;
+        color: #fff;
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 0;
+    }
+    .mobmenu-toggle {
+        background-color: orange;
+        color: #fff;
+        font-size: 35px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        height: 50px;
+        line-height: 50px;
+    }
+    .mobile-toggleable-menu li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+    }
+    .mobile-toggleable-menu li a {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        border-bottom: 1px solid #444;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 20px;
+    }
+    .mobile-toggleable-menu li a:hover {
+        background-color: #222;
+        color: orange;
+    }
+    .mobmenu-toggle:hover {
+        background-color: darkOrange;
+    }
+    @media screen and (max-width: 500px) {
+        .mobile-toggleable-menu li {
+            padding: 0;
+            text-indent: 20px;
+            display: block;
+        }
+        .mobile-toggleable-menu li a {
+            display: block;
+        }
+        .mobile-menu-toggle-button:checked ~ .mobmenu-toggle {
+            background-color: #000;
+            color: orange;
+            -webkit-transform: rotate(-180deg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>CSS Drawer menu &mdash; the most lightweight one ever!?</h1>
+    <h3>Drag the window to see a demo!</h3>
+    <nav>
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle mobile-menu-toggle-button">
+        <ul id="plain-menu" class="mobile-toggleable-menu mobile-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+        <label class="mobile-left mobmenu-toggle" for="mobile-menu-toggle">+</label>
+    </nav>
+    <h3>Say whaaat?</h3>
+    <ul>
+        <li>Responsive</li>
+        <li>Percentage based!</li>
+        <li>ULTRA Lightweight!</li>
+        <li>PURE CSS! (2kb uncompressed)</li>
+    </ul>
+    <p><strong>How does it work?</strong></p>
+    <p>Through the hackish magic of the input:checked pseudo-selector and combined adjacent sibling (x + y) selector!</p>
+    <p>See the source code for details. It's pretty much plug and play. Add your own styles, or feel free to take the css from this example.</p>
+    <p><strong>Note:</strong> because of the adjacent selector hack, you must keep the order of each html element intact when using it. That means the order should be: <em>input:checkbox, menu, label</em></p>
+    <p>Optional classes</p>
+    <ul>
+        <li><strong>.mobile-left</strong> Makes it come from the left</li>
+        <li><strong>.mobile-right</strong> Makes it come from the right</li>
+    </ul>
+</div>
+<hr>
+</body>
+</html>
