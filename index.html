@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>CSS Drawer Menu</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="menu.css">
     <style type="text/css">
     * {
@@ -11,11 +12,16 @@
     }
     body {
         height: 2000px; /* Testing height */
-        font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+        font-family: 'Lato', sans-serif;
         padding: 30px;
+    }
+    ul {
+        margin: 0;
+        padding: 1em;
     }
     ul li {
         line-height: 2em;
+        list-style: square;
     }
     /* OPTIONAL THEMING */
     .mobile-toggleable-menu {
@@ -59,15 +65,7 @@
     .mobmenu-toggle:hover {
         background-color: darkOrange;
     }
-    @media handheld, (max-width: 500px) {
-        .mobile-toggleable-menu li {
-            padding: 0;
-            text-indent: 20px;
-            display: block;
-        }
-        .mobile-toggleable-menu li a {
-            display: block;
-        }
+    @media handheld, screen and (max-width: 500px) {
         .mobile-menu-toggle-button:checked ~ .mobmenu-toggle {
             background-color: #000;
             color: orange;
@@ -105,7 +103,6 @@
         <li><strong>.mobile-left</strong> Makes it come from the left</li>
         <li><strong>.mobile-right</strong> Makes it come from the right</li>
     </ul>
-</div>
-<hr>
+    <hr>
 </body>
 </html>

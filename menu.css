@@ -6,7 +6,7 @@
     position: absolute;
     top: -9999px;
 }
-@media handheld, (max-width: 480px) { /* <-- Adjust the breakpoints to your liking */
+@media handheld, screen and (max-width: 480px) { /* <-- Adjust the breakpoints to your liking */
     .mobmenu-toggle,
     .mobile-menu-toggle-button,
     .mobile-toggleable-menu {
